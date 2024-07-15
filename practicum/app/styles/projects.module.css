@@ -1,0 +1,20 @@
+.projects{
+    border-bottom: 3px solid #5D3D87;
+}
+
+.project-content{
+    border: 3px solid #5D3D87;
+    border-radius: 25px;
+}
+
+.project-name{
+    font-family: "Fraunces", serif!important;
+    font-variation-settings:
+    "SOFT" 100,
+    "WONK" 1!important;
+}
+
+.project-img{
+    width:50vw;
+    height:25vw;
+}

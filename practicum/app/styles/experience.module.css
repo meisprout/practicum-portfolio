@@ -1,0 +1,31 @@
+.experience{
+    border-bottom: 3px solid #5D3D87;
+}
+
+.sparkle-bullet{
+    filter: invert(27%) sepia(22%) saturate(1598%) hue-rotate(224deg) brightness(96%) contrast(92%);
+}
+
+.experience-list{
+    border-right: 3px solid #5D3D87;
+}
+
+.skills{
+    border: 3px solid #5D3D87;
+    border-radius: 15px;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+@media only screen and (max-width: 900px) {
+    .experience-list{
+        border-right: 0;
+        border-bottom:3px solid #5D3D87;
+    }
+    .skills-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
