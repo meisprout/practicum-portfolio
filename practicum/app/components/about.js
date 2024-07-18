@@ -27,7 +27,7 @@ export default function About() {
         <div className={`${styles.text}`}>
           <div>
             <h1>Hello! I’m Eah!</h1>
-            <p>Nice to meet you! I am Andrea Mei T. Maala, a BS Computer Science student from Mapua Malayan Colleges Laguna specializing in Front-end Development and Web and UX/UI Design. I aim to create functional web interfaces that reaches the goals o</p>
+            <p>Nice to meet you! I am Andrea Mei T. Maala, a BS Computer Science student from Mapua Malayan Colleges Laguna specializing in Front-end Development and Web and UX/UI Design. I aim to create functional and visually pleasing web interfaces that will make the internet an interesting place to explore with.</p>
             <p>Outside of being a developer, I am also a creative who has done related volunteer work for the Mapua MCL Supreme Student Council and Mapua MCL Cup 2024. This allows me to apply design rules and principles, work with different kinds of people, and adapt in a fast-paced environment.</p>
             <p>When I am not working, I draw, paint, listen to K-Pop and RnB, and watch everything that interests me on Youtube.</p>
           </div>
