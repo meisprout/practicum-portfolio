@@ -31,3 +31,8 @@ button, input[type="submit"]{
   background-color: #5D3D87!important;
   color:#F5F4EB!important;
 }
+
+.button-alt{
+  background-color: #F5F4EB!important;
+  color:#5D3D87!important;
+}

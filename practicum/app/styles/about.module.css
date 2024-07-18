@@ -13,6 +13,16 @@
     padding:3rem;
 }
 
+.skills{
+    border: 3px solid #5D3D87;
+    border-radius: 15px;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
 @media only screen and (max-width: 900px) {
     .img-container{
         width:55vw;
@@ -25,5 +35,9 @@
         min-height:auto;
         width: auto;
         padding:3rem;
+    }
+
+    .skills-list{
+        grid-template-columns: repeat(2,1fr);
     }
   }

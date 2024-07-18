@@ -1,7 +1,27 @@
 .practicum{
     border-bottom:3px solid #5D3D87;
+    padding:6rem 4rem;
+}
+
+.practicum-container{
+    background-color: #5D3D87;
+    color: #F5F4EB;
+    border-radius: 25px;
 }
 
 .img-container{
     height:5rem;
+}
+
+.cert-container{
+    width:50vw;
+}
+
+.practicum-main{
+    border-left: 3px solid #5D3D87;
+    padding:4rem;
+}
+
+.toc{
+    background-color: #F5F4EB;
 }

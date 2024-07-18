@@ -1,5 +1,6 @@
 .projects{
     border-bottom: 3px solid #5D3D87;
+    padding: 2rem 6rem;
 }
 
 .project-content{
@@ -15,6 +16,32 @@
 }
 
 .project-img{
-    width:50vw;
-    height:25vw;
+    width:52vw;
+    height:18rem;
+    aspect-ratio: 16/9;
 }
+
+.skill{
+    border: 3px solid #5D3D87;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    .projects{
+        padding: 2rem;
+    }
+
+    .project-img{
+        width:90vw;
+        height:9rem;
+        aspect-ratio: 16/9;
+    }
+    
+    .experience-list{
+        border-right: 0;
+        border-bottom:3px solid #5D3D87;
+    }
+    .skills-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }

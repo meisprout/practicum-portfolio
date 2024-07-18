@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Practicum() {
     
     return (
-      <section id="practicum" className={`${styles.practicum} d-flex flex-column align-items-center p-4`}>
-            <div className={`w-lg-100 w-75 py-4`}>
+      <section id="practicum" className={`${styles.practicum} d-flex flex-column align-items-center p-lg-4 p-4`}>
+            <div className={`${styles["practicum-container"]} w-lg-100 w-75 p-4`}>
               <div className={`d-flex flex-column align-items-center text-center`}>
                 <h1>Practicum Experience</h1>
                 <p className={`mb-0`}>Prosperna</p>
@@ -20,7 +20,7 @@ export default function Practicum() {
               <p>Working in Prosperna for almost 2 months strengthened my foundations as a developer through
               honing my experience in ReactJS and shaping my skills in teamwork, communication, transparency, and accountability. This practicum
               gave me an opportunity to learn and experience working with technology in a real world setting.</p>
-              <div className={`text-center`}><Link href="/practicum"><button className={`btn`}>Read More</button></Link></div>
+              <div className={`text-center`}><Link href="/practicum"><button className={`btn button-alt`}>Read More</button></Link></div>
               
             </div>
       </section>
