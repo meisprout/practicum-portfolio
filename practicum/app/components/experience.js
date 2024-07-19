@@ -13,7 +13,7 @@ function ExperienceList({...props}){
                     <p className={`mb-0 pb-0 fw-bold fs-5`}>{props.affiliation}</p>
                     <p>{props.role}</p>
                 </div>
-                <div className={`w-75 ps-lg-4`}>
+                <div className={`w-lg-75 w-100 ps-lg-4`}>
                     <p>{props.description}</p>
                 </div>
             </div>

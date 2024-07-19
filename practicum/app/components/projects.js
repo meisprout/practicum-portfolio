@@ -1,5 +1,7 @@
 import styles from "../styles/projects.module.css";
 import Image from "next/image";
+import Link from "next/link";
+
 
 const imageStyle = {
   width:'100%',
@@ -22,6 +24,7 @@ function ProjectContent({...props}){
           {skillListItem}
         </ul>
         <p>{props.description}</p>
+        <Link href={props.linkHref} target="blank"><button className={`btn`}>{props.linkLabel}</button></Link>
       </div>
      <div>
       <div className={`${styles["project-img"]}`}>
@@ -51,28 +54,32 @@ export default function Projects() {
             description="A new feature in the Prosperna merchant platform."
             skills={["Front-end Development"]}
             img="/images/project_preview/product-image-labels.png"
-            button
+            linkLabel="Read More"
+            linkHref="/practicum#outputs"
             />
             <ProjectContent
             name="e-ganapp Web Application"
             description="A seamless event management system for Mapua MCL event organizers and attendees."
             skills={["Front-end Development", "UI Design"]}
             img="/images/project_preview/e-ganapp.png"
-            button
+            linkLabel="Visit Site"
+            linkHref="https://e-ganapp.mcl-ccis.net/"
             />
             <ProjectContent
             name="Art Portfolio"
             description="A web portfolio showcasing my illustrations, along with my commission procedures. Integrated Notion API to retrieve data from my Notion teamspace for a more convenient content management. In the process of redesigning."
             skills={["Front-end Development", "UI Design"]}
             img="/images/project_preview/loafsproutartportfolio.png"
-            button
+            linkLabel="Visit Site"
+            linkHref="https://loafsprout.vercel.app/"
             />
             <ProjectContent
             name="Wheein Day 2023"
             description="(unfinished) A tribute for Jung Wheein’s birthday. Used this personal mini-project to practice GSAP animations by implementing scroll animations for dynamic web experiences."
             skills={["Front-end Development", "UI Design"]}
             img="/images/project_preview/wheeinday.png"
-            button
+            linkLabel="Visit Site"
+            linkHref="https://wheeinday2023.vercel.app/"
             />
         </div>
       </section>

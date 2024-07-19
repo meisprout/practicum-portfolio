@@ -13,7 +13,7 @@ export default function Nav() {
                 height={50}
             />
         </Link>
-        <ul className={"list-unstyled d-flex gap-3"}>
+        <ul className={"list-unstyled d-lg-flex d-none gap-3"}>
             <li><Link className={"text-reset text-decoration-none"} href="./#about">About</Link></li>
             <li><Link className={"text-reset text-decoration-none"} href="./#experience">Experience</Link></li>
             <li><Link className={"text-reset text-decoration-none"} href="./#projects">Projects</Link></li>
