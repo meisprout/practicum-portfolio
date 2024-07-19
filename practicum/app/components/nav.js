@@ -11,9 +11,10 @@ export default function Nav() {
                 src="../header_logo.svg"
                 width={50}
                 height={50}
+                className={`mb-0`}
             />
         </Link>
-        <ul className={"list-unstyled d-lg-flex d-none gap-3"}>
+        <ul className={"list-unstyled d-lg-flex align-items-center justify-content-center mb-0 d-none gap-3"}>
             <li><Link className={"text-reset text-decoration-none"} href="./#about">About</Link></li>
             <li><Link className={"text-reset text-decoration-none"} href="./#experience">Experience</Link></li>
             <li><Link className={"text-reset text-decoration-none"} href="./#projects">Projects</Link></li>
