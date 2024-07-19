@@ -1,14 +1,41 @@
+"use client"
+
 import styles from "../styles/contact.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Contact() {
+  async function handleSubmit(event) {
+
+    event.preventDefault();
+    const formData = new FormData(event.target)
+    try {
+
+        const response = await fetch('../api/contact/', {
+            method: 'post',
+            body: formData,
+        });
+
+        if (!response.ok) {
+            console.log("falling over")
+            throw new Error(`response status: ${response.status}`);
+        }
+        const responseData = await response.json();
+        console.log(responseData['message'])
+
+        alert('Message successfully sent');
+    } catch (err) {
+        console.error(err);
+        alert("Error, please try resubmitting the form");
+    }
+};
     
     return (
       <section id="contact" className={`d-flex flex-lg-row flex-column`}>
         
         <div className={`${styles["contact-details"]} w-lg-50 text-center text-lg-start p-4`}>
             <h1>Let's connect together!</h1>
+            <a href="../api/contact">eeeeeee</a>
             <div className={`d-flex gap-3`}>
             <Link href="/files/ANDREA_MEI_MAALA_CV.pdf" target="blank">
               <button className={`btn`}>
@@ -60,15 +87,15 @@ export default function Contact() {
               
             
         </div>
-        <form className={`w-75 p-4`}>
+        <form onSubmit={handleSubmit} className={`w-75 p-4`}>
             <label>Email</label>
-            <input className={`${styles.input} form-control w-75 mb-4`}/>
+            <input id="form-email" name="email" type="email" className={`${styles.input} form-control w-75 mb-4`}/>
 
             <label>Subject</label>
-            <input className={`${styles.input} form-control w-75 mb-4`}/>
+            <input id="form-name" name="name" className={`${styles.input} form-control w-75 mb-4`}/>
 
             <label>Message</label>
-            <textarea className={`${styles.input} form-control w-75 mb-4`} rows="8" cols="50"/>
+            <textarea id="form-message" name="message" className={`${styles.input} form-control w-75 mb-4`} rows="8" cols="50"/>
 
             <input type="submit" className={`btn`}></input>
         </form>
