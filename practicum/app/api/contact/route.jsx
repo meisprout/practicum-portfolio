@@ -14,6 +14,7 @@ export async function POST(request) {
     console.log("dealing with request")
     const formData = await request.formData()
     const name = formData.get('name')
+    const subject = formData.get('subject')
     const email = formData.get('email')
     const message = formData.get('message')
 
@@ -33,14 +34,17 @@ export async function POST(request) {
     try {
 
         const mail = await transporter.sendMail({
-            from: username,
+            from: email,
             to: myEmail,
             replyTo: email,
-            subject: `Website activity from ${email}`,
+            subject: `${subject} | ${name}`,
             html: `
             <p>Name: ${name} </p>
             <p>Email: ${email} </p>
-            <p>Message: ${message} </p>
+            <p>Message: </p> 
+            <p>${message} </p>
+            <br>
+            <p>Sent from <a href="https://maala-practicum-portfolio.vercel.app/">maala-practicum-portfolio.vercel.app</a></p>
             `,
         })
 

@@ -35,7 +35,6 @@ export default function Contact() {
         
         <div className={`${styles["contact-details"]} w-lg-50 text-center text-lg-start p-4`}>
             <h1>Let's connect together!</h1>
-            <a href="../api/contact">eeeeeee</a>
             <div className={`d-flex gap-3`}>
             <Link href="/files/ANDREA_MEI_MAALA_CV.pdf" target="blank">
               <button className={`btn`}>
@@ -88,14 +87,17 @@ export default function Contact() {
             
         </div>
         <form onSubmit={handleSubmit} className={`w-75 p-4`}>
+            <label>Name</label>
+            <input required id="form-name" name="name" className={`${styles.input} form-control w-75 mb-4`}/>
+            
             <label>Email</label>
-            <input id="form-email" name="email" type="email" className={`${styles.input} form-control w-75 mb-4`}/>
+            <input required id="form-email" name="email" type="email" className={`${styles.input} form-control w-75 mb-4`}/>
 
             <label>Subject</label>
-            <input id="form-name" name="name" className={`${styles.input} form-control w-75 mb-4`}/>
+            <input required id="form-subject" name="subject" className={`${styles.input} form-control w-75 mb-4`}/>
 
             <label>Message</label>
-            <textarea id="form-message" name="message" className={`${styles.input} form-control w-75 mb-4`} rows="8" cols="50"/>
+            <textarea required id="form-message" name="message" className={`${styles.input} form-control w-75 mb-4`} rows="8" cols="50"/>
 
             <input type="submit" className={`btn`}></input>
         </form>
